@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <title>Calculator</title>
+    <style>
+        .div1{
+        border: 2px solid black;
+        width: 350px;
+        height: 400px;
+        padding: 40px;
+        margin: auto;
+        border-radius: 20px;
+        background-color: lightblue;
+        box-shadow: 7px 9px 20px;
+        }
+        .body1{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .inp1{
+         width: 260px;
+        border-radius: 10px;
+        border-color: darkblue;
+        }
+        .form1{
+            text-align: center;
+        }
+    </style>
+</head>
+<body class="body1">
+<div class="div1">
+    <form class="form1">
+        <h3>CACULATOR</h3>
+        <label>Enter first Number</label><br>
+        <input class="inp1" type="text" name="name" id="name"><br><br>
+        <label>Enter Second Number</label><br>
+        <input class="inp1" type="text" name="name2" id="name2"><br><br>
+        <button class="btn btn-primary" type="button" onclick="getAdd()">add</button>
+        <button class="btn btn-primary" type="button" onclick="getSubs()">subs</button>
+        <button class="btn btn-primary" type="button" onclick="getMul()">mul</button>
+        <button class="btn btn-primary" type="button" onclick="getDiv()">div</button><br><br>
+        <label>Result is:</label><br>
+        <input class="inp1" type="text" name="res" id="res" readonly><br><br>
+
+    </form>
+</div>
+   
+
+    <script>
+       
+       function getAdd(){
+        //Addition
+        var n1,n2,c;
+        var n1 = Number(document.getElementById("name").value);
+        var n2 = Number(document.getElementById("name2").value);
+        c=((parseInt(n1)+parseInt(n2)));
+        document.getElementById("res").value=c;
+       }
+       function getSubs(){
+        //Subs
+       var n1= document.getElementById("name").value;
+       var n2= document.getElementById("name2").value;
+       c=((parseInt(n1)-parseInt(n2)));
+        document.getElementById("res").value=c;
+       }
+       function getMul(){
+        //mul
+       var n1= document.getElementById("name").value;
+       var n2= document.getElementById("name2").value;
+       c=((parseInt(n1)*parseInt(n2)));
+        document.getElementById("res").value=c;
+       }
+       function getDiv(){
+        //div
+       var n1= document.getElementById("name").value;
+       var n2= document.getElementById("name2").value;
+       c=((parseInt(n1)/parseInt(n2)));
+        document.getElementById("res").value=c;
+       }
+       
+
+       
+    </script>
+</body>
+</html>
